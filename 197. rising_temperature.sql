@@ -1,3 +1,7 @@
+PROBLEM:
+
+197. Rising Temperature
+
 Table: Weather
 
 +---------------+---------+
@@ -47,7 +51,8 @@ In 2015-01-04, the temperature was higher than the previous day (20 -> 30).
 
 
 
-Solution:
+SOLUTION:
+
 # Write your MySQL query statement below
 
 SELECT w1.id
