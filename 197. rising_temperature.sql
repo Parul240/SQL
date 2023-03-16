@@ -46,6 +46,7 @@ In 2015-01-04, the temperature was higher than the previous day (20 -> 30).
 
 
 
+
 Solution:
 
 # Write your MySQL query statement below
