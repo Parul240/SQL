@@ -2,10 +2,8 @@ PROBLEM:
 
 182. Duplicate Emails
 
-SQL Schema
 Table: Person
-
-+-------------+---------+
+ +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
 | id          | int     |
@@ -13,15 +11,13 @@ Table: Person
 +-------------+---------+
 id is the primary key column for this table.
 Each row of this table contains an email. The emails will not contain uppercase letters.
- 
 
-Write an SQL query to report all the duplicate emails. Note that it's guaranteed that the email field is not NULL.
+
+Write an SQL query to report all the duplicate emails. Note that it is guaranteed that the email field is not NULL.
 
 Return the result table in any order.
 
 The query result format is in the following example.
-
- 
 
 Example 1:
 
@@ -34,6 +30,7 @@ Person table:
 | 2  | c@d.com |
 | 3  | a@b.com |
 +----+---------+
+
 Output: 
 +---------+
 | Email   |
@@ -45,12 +42,10 @@ Explanation: a@b.com is repeated two times.
 
 
 
-
-
 SOLUTION:
 
+/*Write your MySQL query statement below*/
 
-# Write your MySQL query statement below
 SELECT email
 FROM Person
 GROUP BY email
