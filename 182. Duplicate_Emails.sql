@@ -1,3 +1,7 @@
+PROBLEM:
+
+182. Duplicate Emails
+
 SQL Schema
 Table: Person
 
@@ -37,5 +41,16 @@ Output:
 | a@b.com |
 +---------+
 Explanation: a@b.com is repeated two times.
+
+
+
+SOLUTION:
+
+# Write your MySQL query statement below
+
+SELECT email
+FROM Person
+GROUP BY email
+HAVING COUNT(email) > 1;
 
 
