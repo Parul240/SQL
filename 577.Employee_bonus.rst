@@ -77,7 +77,8 @@ The query result format is in the following example.
     FROM Employee LEFT JOIN Bonus USING(empId)
     WHERE COALESCE(bonus, 0) < 1000; 
 
-     
+.. code:: sql
+
     SOLUTION 2:
     
     SELECT
