@@ -68,4 +68,24 @@ The query result format is in the following example.
     | Dan  | 500   |
     +------+-------+
    
+   
+.. code:: sql
+    SOLUTION 1:
+    
+    SELECT name, bonus
+    FROM Employee LEFT JOIN Bonus USING(empId)
+    WHERE COALESCE(bonus, 0) < 1000; 
+
+     
+    SOLUTION 2:
+    SELECT
+    name,
+    bonus
+    FROM
+    Employee e
+    LEFT JOIN Bonus b
+    ON
+    e.empId = b.empId
+    WHERE
+    bonus < 1000 OR bonus is NULL
 
