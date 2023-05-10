@@ -79,11 +79,12 @@ where if(O.ID,0,1)
 
 
 #2.
-SELECT Customers.name AS Customers
-FROM Customers
-LEFT JOIN Orders
-ON Customers.id = Orders.customerId
-WHERE Orders.customerId is null;
+SELECT name as Customers
+from Customers
+where id not in (
+    select customerId
+    from Orders
+);
 
 
 #3.
