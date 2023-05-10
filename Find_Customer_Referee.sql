@@ -56,10 +56,17 @@ Solution:
 #Parul Sharma
 
 
-
+#1.
 SELECT
 name
 FROM
 customer
 WHERE
 referee_id <> 2 or referee_id IS NULL;
+
+#2.
+SELECT name
+FROM customer
+WHERE COALESCE(referee_id,0) <> 2;
+
+#here COALESCE is used to replace NULL values with zero before checking whether it is equal to 2 or not.
